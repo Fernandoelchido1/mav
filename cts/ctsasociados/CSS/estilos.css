@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+overflow-x: hidden;
+overflow-y: hidden;
+}
+
+.loningle{
+    text-align: right;
+    line-height: 40px;
+    word-spacing: 10px;
+}
+
+
+.lgin{
+    text-decoration: none;
+    color: black;
+
+}
+
+.nglish{
+    text-decoration: none;
+    color: black;
+}
+
+.fondo{
+    background-image:url(../imgs/bg.jpg);
+    background-position: left;
+    background-repeat: no repeat;
+    background-size: cover;
+    
+
+}
+
+
+
+.colores{
+    background-image: url(color.png);
+}
+
+[class *='section']{
+    border: 3px #FFC400 solid;
+}
+
+
+.Aviso{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.galery
+{
+    position: unset;
+    padding-top: 1px;
+    height: 400px;
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+}
+.galeri__img
+{
+    cursor: pointer;
+    width: 80px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: flex .5s;
+    flex: 1;
+    display: grid;
+    border-radius: 10px;
+    
+    --message1: '¿Por qué CTS Asociados?';
+    --message2: 'Dirección Estratégica';
+    --message3: 'Trabajo Conjunto';
+    --message4: 'Visión Global';
+    --message5: 'Base de conocimientos';
+
+    --clip: circle(0 at center);
+    --transition: clip-path .2s;
+}
+.galeri__img:nth-child(1)::before
+{
+    content: var(--message1);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: arial;
+    font-size: 2rem;
+    color: snow;
+    clip-path: var(--clip);
+    transition: var(--transition);
+    border-radius: 10px;
+    border: 3px #FFC400 solid;
+    
+}
+.galeri__img:nth-child(2)::before
+{
+    content: var(--message2);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: arial;
+    font-size: 2rem;
+    color: snow;
+    clip-path: var(--clip);
+    transition: var(--transition);
+    border-radius: 10px;
+    border: 3px #FFC400 solid;
+}
+.galeri__img:nth-child(3)::before
+{
+    content: var(--message3);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: arial;
+    font-size: 2rem;
+    color: snow;
+    clip-path: var(--clip);
+    transition: var(--transition);
+    border-radius: 10px;
+    border: 3px #FFC400 solid;
+}
+.galeri__img:nth-child(4)::before
+{
+    content: var(--message4);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: arial;
+    font-size: 2rem;
+    color: snow;
+    clip-path: var(--clip);
+    transition: var(--transition);
+    border-radius: 10px;
+    border: 3px #FFC400 solid;
+}
+.galeri__img:nth-child(5)::before
+{
+    content: var(--message5);
+    display: grid;
+    place-items: center;
+    background-color: #1d1d1e48;
+    font-family: arial;
+    font-size: 2rem;
+    color: snow;
+    clip-path: var(--clip);
+    transition: var(--transition);
+    border-radius: 10px;
+    border: 3px #FFC400 solid;
+}
+.galeri__img:hover
+{
+    flex: 6;
+    --clip: circle(100% at center);
+    --transition: clip-path .3s .3s;
+}
+.galeri__img:nth-child(1)
+{
+    background-image: url('../imgs/f01.jpg');
+}
+.galeri__img:nth-child(2)
+{
+    background-image: url('../imgs/f02.jpg');
+}
+.galeri__img:nth-child(3)
+{
+    background-image: url('../imgs/f03.jpg');
+}
+.galeri__img:nth-child(4)
+{
+    background-image: url('../imgs/f04.jpg');
+}
+.galeri__img:nth-child(5)
+{
+    background-image: url('../imgs/f05.jpg');
+}
+
+.copyright{
+    text-align: right;
+}
+
+.link{
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+.copyright{
+    text-align: right;
+}
+
+
+/* Estilos para el botón del menú */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #ffff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 380px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    line-height: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.5s ;
+}
+
+.dropdown-content a:hover {
+    background-color: #ffff;
+    color: #FFC400;
+}
+
+/* Mostrar el menú desplegable al pasar el ratón sobre el botón */
+.menu:hover .dropdown-content {
+    display: block;
+}
+.servici{
+    text-decoration: none;
+    color: black;
+    opacity: 70%;
+    padding : 10px;
+    margin: 8px;
+
+}
+
+.servici:hover{
+    color: #FFC400;
+    transition:0.5s;
+}

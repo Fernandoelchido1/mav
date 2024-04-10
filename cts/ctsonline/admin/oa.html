@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana flotante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .ventana-flotante {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+        padding: 20px;
+        border: 1px solid #c0bfbf; /* Borde sólido */
+        border-radius: 10px; /* Esquinas redondeadas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+        z-index: 9999; /* Asegura que esté por encima del resto del contenido */
+        max-width: 300px; /* Ancho máximo de la ventana */
+    }
+
+    .contenido {
+        text-align: center;
+    }
+
+    .logo {
+        width: 30px; /* Tamaño del logo */
+        margin-right: 250px; /* Espacio entre el logo y el texto */
+    }
+
+    .cambiate-de-plan {
+        text-transform: uppercase; /* Convertir texto a mayúsculas */
+        color: #000000b4; /* Color de texto gris */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 10px 10px;
+        background-color: #ff8400; /* Color de fondo del botón */
+        color: #fff; /* Color del texto del botón */
+        text-decoration: none; /* Quitar subrayado del enlace */
+        border-radius: 5px; /* Esquinas redondeadas */
+        transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+    }
+
+    .boton:hover {
+        background-color: #0704a3; /* Cambia el color de fondo al pasar el ratón */
+    }
+</style>
+<body>
+
+<div class="ventana-flotante">
+    <div class="contenido">
+        <img src="../imgs/ctsicon.ico" alt="Logo" class="logo">
+        <p class="cambiate-de-plan">Cámbiate de plan</p><br>
+        <a href="mercado/vendor/autoload.php" class="boton">Ir a planes</a>
+    </div>
+</div>
+
+<!-- Resto del contenido de tu página -->
+<a href="../php/calef.php"></a>
+
+</body>
+</html>

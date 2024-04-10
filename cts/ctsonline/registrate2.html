@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../ctsonline/imgs/favicon.png">
+    <title>Registro</title>
+
+    
+
+    <style>
+        body {
+            background: #ffff;
+            background: linear-gradient(to right, #FFC400);
+            overflow: hidden;
+        }
+
+        .bg {
+            background-image: url(../ctsonline/imgs/ctss.png);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container w-100 mt-5 rounded shadow">
+        <div class="row align-items-lg-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <img src="../imgs/ctsicon.ico" width="48" alt="">
+                </div>
+
+                <h2 class="fw-bold text-center py-5">Registrate</h2>
+
+                <form action="php/registro.php" method="post" class="needs-validation" novalidate>
+                    <div class="mb-1">
+                        <label for="name" class="form-label"></label>
+                        <input class="form-control" placeholder="Nombre" type="text" name="nombres" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Es necesario poner el nombre</div>
+
+                        <label for="apellido" class="form-label"></label><br>
+                        <input class="form-control" placeholder="Primer apellido" type="text" name="apellido_m" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Es necesario poner el primer apellido</div>
+
+                        <label for="apellido" class="form-label"></label><br>
+                        <input class="form-control" placeholder="Segundo apellido" type="text" name="apellido_p" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Es necesario poner el segundo apellido</div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label"></label>
+                        <input placeholder="Correo electrónico" type="email" class="form-control" name="correo" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Es necesario poner el correo</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label"></label>
+                        <input placeholder="Contraseña" type="password" class="form-control" name="contrasena" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Es necesario poner una contraseña</div>
+                    </div>
+
+                    <!-- Agrega este campo oculto para enviar el valor del rol -->
+                    <input type="hidden" name="rol" id="rol" value="">
+
+                    <div class="d-grid">
+                        <button type="submit" class="container w-50 btn btn-warning">Registrate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        // Script para activar la validación de Bootstrap
+        (() => {
+            'use strict'
+
+            // Obtener todos los formularios a los que queremos aplicar estilos de validación personalizados de Bootstrap
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Recorrerlos y evitar la presentación si hay campos no válidos
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+
+            // Agrega este script para obtener y asignar el valor del rol
+            const urlParams = new URLSearchParams(window.location.search);
+            const rolParam = urlParams.get('rol');
+            document.getElementById('rol').value = rolParam;
+        })();
+    </script>
+
+</body>
+</html>
